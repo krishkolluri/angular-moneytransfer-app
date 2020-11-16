@@ -1,0 +1,66 @@
+<div class="card">
+    <div class="card-header">
+        <img src="/assets//icons/briefcase.png" alt="">
+        
+		{{'Recent Transactions' | translate }}
+		
+		<span class="form-language">
+		  <select 
+			  class="form-control" 
+			  #selectedLang 
+			  (change)="switchLang(selectedLang.value)">
+			<option *ngFor="let language of translate.getLangs()" 
+			  [value]="language"
+			  [selected]="language === translate.currentLang">
+			  {{ language }}
+			</option>
+		  </select>
+		</span>
+    </div>
+
+    <div class="sorting-grid">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group ">
+                    <div class="serach-wrapper">
+                        <input type="text" class="form-control"  [(ngModel)]="searchText" placeholder="Search..."/>
+                        <button class="btn clear-serach-input" (click)="clearSearch()">x</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 responsive-width">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <span class="sort-text"><strong>{{'Sort by' | translate }}</strong></span>
+                    <button type="button" class="btn btn-secondary" (click)="sortTableWith('date')">
+                         {{'date' | translate }}
+                        <span *ngIf="dateAscending"><i class="fas fa-angle-up"></i></span>
+                        <span *ngIf="!dateAscending"><i class="fas fa-angle-down"></i></span>
+                    </button>
+                    <button type="button" class="btn btn-secondary" (click)="sortTableWith('beneficiary')">
+                        {{'beneficiary' | translate }}
+                    </button>
+                    <button type="button" class="btn btn-secondary" (click)="sortTableWith('amount')">
+                        {{'amount' | translate }}
+                    </button>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-striped border mt-1">
+        <tbody>
+            <tr *ngFor="let transaction of data | filterTable: searchText">
+                <td [ngStyle]="{'border-left': '10px solid' + transaction.categoryCode}">
+                  
+                </td>
+                <td>{{ transaction.date | date }}</td>
+                <td><img src="{{ transaction.logo }}" /></td>
+                <td>
+                    <div><strong>{{ transaction.merchant }}</strong></div>
+                    <div>{{ transaction.transactionType }}</div>
+                </td>
+                <td><strong>${{ transaction.amount }}</strong></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

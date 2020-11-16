@@ -1,0 +1,59 @@
+
+<div class="card">
+    <div class="card-header">
+        <img src="/assets//icons/arrows.png" alt="">
+        
+		{{'Make a Transfer' | translate }}
+    </div>
+   <div class="card-body">
+        <!-- Transfer Form -->
+    <form [formGroup]="transferForm" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+         
+            <div class="form-group col-12">
+                <label>{{'FROM ACCOUNT' | translate}}</label>
+                <input type="text" formControlName="fromAccount" class="form-control" disabled/>
+                <!-- <div *ngIf="submitted && f.fromAccount.errors" class="invalid-feedback">
+                    <div *ngIf="f.fromAccount.errors.required">Please enter a valid from account</div>
+                </div> -->
+            </div>
+
+            <div class="form-group col-12">
+                <label> {{'TO ACCOUNT' | translate}}</label>
+                <input type="text" formControlName="toAccount" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.toAccount.errors }" />
+                <div *ngIf="submitted && f.toAccount.errors" class="invalid-feedback">
+                    <div *ngIf="f.toAccount.errors.required">{{'Please enter a valid to account' | translate}}</div>
+                </div>
+            </div>
+
+            <div class="form-group col-12">
+                <label> {{'COMMENTS' | translate}} </label>
+                <input type="text" formControlName="comments" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.comments.errors }" />
+                <div *ngIf="submitted && f.comments.errors" class="invalid-feedback">
+                    <div *ngIf="f.comments.errors.required">{{'Please enter transactoin comments'| translate}}</div>
+                </div>
+            </div>
+
+            <div class="form-group col-12">
+                <label> {{'AMOUNT' | translate}} </label>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">$</div>
+                    </div>
+                    <input type="number" formControlName="amount" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.amount.errors }" />
+                  </div>
+                
+                <div *ngIf="submitted && f.amount.errors" class="invalid-feedback">
+                    <div *ngIf="f.amount.errors.required">{{'Please enter a valid to account' | translate}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="text-right">
+            <button class="btn btn-primary mr-1">{{'SUBMIT' | translate}}</button>
+        </div>
+    </form>
+    <!-- Transfer Form -->
+   </div>
+</div>
+
+  

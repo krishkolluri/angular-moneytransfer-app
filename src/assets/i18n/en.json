@@ -1,0 +1,16 @@
+{
+    "Sort by": "Sort by",
+    "amount": "amount",
+    "beneficiary": "beneficiary",
+    "date": "date",
+    "Recent Transactions": "Recent Transactions",
+    "Make a Transfer": "Make a Transfer",
+    "FROM ACCOUNT": "FROM ACCOUNT",
+    "TO ACCOUNT": "TO ACCOUNT",
+	"Please enter a valid to account":"Please enter a valid to account",
+    "COMMENTS":"COMMENTS",
+	"Please enter transactoin comments":"Please enter transactoin comments",
+	"AMOUNT":"AMOUNT",
+	"Please enter a valid to account":"Please enter a valid to account",
+	"SUBMIT":"SUBMIT"
+}

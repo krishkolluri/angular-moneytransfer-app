@@ -1,0 +1,16 @@
+{
+    "Sort by": "Trier par",
+    "amount": "Argent",
+    "beneficiary": "Bénéficiaire",
+    "date": "Date",
+    "Recent Transactions": "transactions récentes",
+    "Make a Transfer": "Effectuer un transfert",
+    "FROM ACCOUNT": "DU COMPTE",
+	"TO ACCOUNT": "ESTIMER",
+    "Please enter a valid to account": "Veuillez saisir un compte valide",
+    "COMMENTS": "COMMENTAIRES",
+	"Please enter transactoin comments":"Veuillez saisir des commentaires sur la transaction",
+	"AMOUNT":"Argent",
+	"Please enter a valid to account":"Veuillez saisir un compte valide",
+	"SUBMIT":"SOUMETTRE"
+}

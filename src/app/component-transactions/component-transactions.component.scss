@@ -1,0 +1,65 @@
+
+.card{
+    border-radius: 0;
+    border-width: 0;
+    .card-header{
+      font-weight: 400;
+      background: darkcyan;
+      border-radius: 0;
+      color: #f9f9f9;
+      text-align: center;
+      img{
+        float: left;
+      }
+    }
+  }
+
+  .table{
+    tr{
+      td{
+        img {
+          width: 35px;
+        }
+        font-size: 13px;
+        strong{
+          font-size: 14px;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  .sorting-grid{
+    padding: 20px;
+    .btn{
+      background: transparent;
+      color: #222222;
+      border-radius: 0;
+      outline: none;
+      box-shadow: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 13px;
+    }
+  }
+
+  .sort-text{
+    padding-right: 10px;
+    font-size: 13px;
+    padding-top: 8px;
+  }
+  .responsive-width{
+        max-width: 51% !important;
+  }
+  .form-language{
+    float:right;
+	display:inline !important;
+  }
+  .serach-wrapper{
+    position: relative;
+    .clear-serach-input{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }

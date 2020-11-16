@@ -1,0 +1,15 @@
+<div class="content-wrapper">
+        <header></header>
+	
+
+        <div class="content">
+            <div class="row">
+                <div class="col-4">
+                    <app-component-transfer (transferAmountData)="getRecord($event)"></app-component-transfer>
+                </div>
+                <div class="col-8">
+                    <app-component-transactions [recordItem]="transactoinData"></app-component-transactions>
+                </div>
+            </div>
+        </div>
+</div>
