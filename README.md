@@ -1,4 +1,4 @@
-# Kartheek
+# KrishnaChaitanya
 step1: To run this application first need to install node js latest version.
 step2: Then install Angular 10.1.7  by following command.
          "npm install -g @angular/cli@10.1.7"
